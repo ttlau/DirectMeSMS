@@ -84,8 +84,6 @@ function motivateUserCallback(err, user) {
 
 		smsBody = 'Keep it up! ' + stepsRemaining + ' to go today.';
 	}
-
-	// console.log("Twilio.sendSms", user.phoneNumber, smsBody);
 	Twilio.sendSms(user.phoneNumber, smsBody);
 }
 
@@ -111,6 +109,7 @@ function notificationsReceived(req, res) {
 
 		for (var i = 0; i < data.length; i++) {
 			console.log(data[i]);
+			console.log("woah this is trying something");
 			updateUserSteps(data[i].ownerId, motivateUserCallback);
 		}
 	});

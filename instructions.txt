@@ -1,0 +1,6 @@
+Steps: 
+1. opened app.js and config.js
+2. Ran ngrok 3000 to set all the data forwarding to localhost:3000
+3. Copy the Forwarding web address to the subscriber on Fitbit website
+4. Set mongo to mongodb://localhost:27017 (default)
+5. Ran node app.js
